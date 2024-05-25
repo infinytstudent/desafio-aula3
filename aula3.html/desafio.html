@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let saldo=1000
+
+while(true){
+let escolha=prompt("escolha entre ver saldo,fazer saque,fazer depósito,esperar um mês e ou sair").toLowerCase()
+
+if(escolha=="ver saldo"){console.log(`seu saldo é de R$${saldo}`)}
+
+if(escolha=="sair"){break}
+
+if(escolha=="esperar um mês"){saldo=saldo+saldo/200}
+
+if(escolha=="fazer depósito"){
+    var depósito=prompt("insira o valor do depósito")
+    saldo=(saldo/1+depósito/1)
+}
+if(escolha=="fazer saque"){
+let saque=prompt("insira o valor do saque")
+if(saque<=saldo){
+    saldo=saldo/1-saque/1
+}
+else{console.log("o sque não pode ter valor maior que o saldo")}
+}
+else{console.log("opção não indentificada")}
+}
+
+    </script>
+</body>
+</html>
